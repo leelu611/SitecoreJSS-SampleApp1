@@ -1,0 +1,14 @@
+<div class="main-content">
+  <div class="header">
+      <app-navigation></app-navigation>
+      <sc-placeholder *ngIf="state === LayoutState.Layout" name="jss-header" [rendering]="route"></sc-placeholder>
+  </div>
+  <div class="container">
+    <sc-placeholder *ngIf="state === LayoutState.Layout" name="jss-main" [rendering]="route"></sc-placeholder>
+    <app-not-found *ngIf="state === LayoutState.NotFound"></app-not-found>
+    <app-server-error *ngIf="state === LayoutState.Error"></app-server-error>
+  </div>
+  <div class="footer">
+      <sc-placeholder *ngIf="state === LayoutState.Layout" name="jss-footer" [rendering]="route"></sc-placeholder>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+{
+  "sitecore": {
+    "instancePath": "C:\\inetpub\\wwwroot\\xp1.sc",
+    "apiKey": "{7306CFF6-327E-43A8-B436-5FC86E31C92F}",
+    "deploySecret": "7vxtf2emhaylzd70ik96wpgua110hx9z9xf49n3rne",
+    "deployUrl": "http://local.angular/sitecore/api/jss/import",
+    "layoutServiceHost": "http://local.angular"
+  }
+}

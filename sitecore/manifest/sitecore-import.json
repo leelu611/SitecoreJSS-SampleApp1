@@ -1,0 +1,298 @@
+{
+  "templates": [
+    {
+      "name": "App Route",
+      "fields": [
+        {
+          "name": "pageTitle",
+          "displayName": "Page Title",
+          "section": "Page Metadata",
+          "type": "Single-Line Text"
+        }
+      ],
+      "route": false,
+      "defaultRoute": true
+    },
+    {
+      "name": "ContentBlock",
+      "icon": "Office/16x16/document_tag.png",
+      "fields": [
+        {
+          "name": "heading",
+          "type": "Single-Line Text"
+        },
+        {
+          "name": "content",
+          "type": "Rich Text"
+        }
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "displayName": "Connected Dashboard",
+      "icon": "Office/16x16/document_tag.png",
+      "fields": [
+        {
+          "name": "heading",
+          "type": "Single-Line Text"
+        },
+        {
+          "name": "customName",
+          "type": "Single-Line Text"
+        },
+        {
+          "name": "content",
+          "type": "Rich Text"
+        }
+      ]
+    },
+    {
+      "name": "Footer",
+      "icon": "Office/16x16/document_tag.png",
+      "fields": [
+        {
+          "name": "heading",
+          "type": "Single-Line Text"
+        },
+        {
+          "name": "footerBanner",
+          "type": "Image"
+        }
+      ]
+    },
+    {
+      "name": "Headers",
+      "icon": "Office/16x16/document_tag.png",
+      "fields": [
+        {
+          "name": "heading",
+          "type": "Single-Line Text"
+        },
+        {
+          "name": "headerBanner",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "placeholders": [
+    {
+      "name": "jss-main",
+      "displayName": "Main"
+    },
+    {
+      "name": "jss-tabs",
+      "displayName": "Tabs",
+      "id": "tabs-placeholder"
+    },
+    {
+      "name": "jss-header",
+      "displayName": "Header",
+      "id": "header-placeholder"
+    },
+    {
+      "name": "jss-footer",
+      "displayName": "Footer",
+      "id": "footer-placeholder"
+    },
+    {}
+  ],
+  "appName": "my-first-jss-app-ang",
+  "language": "en",
+  "renderings": [
+    {
+      "name": "ContentBlock",
+      "icon": "Office/16x16/document_tag.png",
+      "exposedPlaceholders": [],
+      "dataSourceTemplate": "ContentBlock"
+    },
+    {
+      "name": "Dashboard",
+      "displayName": "Connected Dashboard",
+      "icon": "Office/16x16/document_tag.png",
+      "exposedPlaceholders": [],
+      "dataSourceTemplate": "Dashboard"
+    },
+    {
+      "name": "Footer",
+      "icon": "Office/16x16/document_tag.png",
+      "exposedPlaceholders": [],
+      "dataSourceTemplate": "Footer"
+    },
+    {
+      "name": "Headers",
+      "icon": "Office/16x16/document_tag.png",
+      "exposedPlaceholders": [],
+      "dataSourceTemplate": "Headers"
+    }
+  ],
+  "wipeExisting": false,
+  "items": {
+    "routes": [
+      {
+        "id": "home-page",
+        "name": "home",
+        "layout": {
+          "renderings": [
+            {
+              "renderingName": "Headers",
+              "placeholderKey": "/jss-header",
+              "placeholderName": "jss-header",
+              "dataSource": {
+                "name": "home-jss-header-Headers-1",
+                "displayName": "Headers-1",
+                "template": "Headers",
+                "fields": [
+                  {
+                    "name": "heading",
+                    "value": "Header Content (Default route)"
+                  },
+                  {
+                    "name": "headerBanner",
+                    "value": {
+                      "src": "/data/media/img/header.png",
+                      "alt": "headerlogo"
+                    }
+                  }
+                ]
+              },
+              "renderingParams": [],
+              "uid": "{89BE6021-14A7-536E-8C0B-6677BED2D666}"
+            },
+            {
+              "renderingName": "Dashboard",
+              "placeholderKey": "/jss-main",
+              "placeholderName": "jss-main",
+              "dataSource": {
+                "name": "home-jss-main-Dashboard-1",
+                "displayName": "Dashboard-1",
+                "template": "Dashboard",
+                "fields": [
+                  {
+                    "name": "heading",
+                    "value": "Hello, world!"
+                  },
+                  {
+                    "name": "customName",
+                    "value": "Hey this is a custom name"
+                  },
+                  {
+                    "name": "content",
+                    "value": "<div> <h3>Hi there</h3> <hr /> click <a href='http://www.google.com'>here</a> to open google </div>"
+                  }
+                ]
+              },
+              "renderingParams": [],
+              "uid": "{74B6AC39-8573-5B42-92DF-84F089FBB805}"
+            },
+            {
+              "renderingName": "ContentBlock",
+              "placeholderKey": "/jss-main",
+              "placeholderName": "jss-main",
+              "dataSource": {
+                "name": "home-jss-main-ContentBlock-2",
+                "displayName": "ContentBlock-2",
+                "template": "ContentBlock",
+                "fields": [
+                  {
+                    "name": "heading",
+                    "value": "Welcome to Sitecore JSS"
+                  },
+                  {
+                    "name": "content",
+                    "value": "<div>\n  <h1>Content</h1>\n  <div>\n    Sampel body content\n  </div>\n</div>\n"
+                  }
+                ]
+              },
+              "renderingParams": [],
+              "uid": "{7418112D-B1C0-53FE-9256-B807B16FE3F4}"
+            },
+            {
+              "renderingName": "Footer",
+              "placeholderKey": "/jss-footer",
+              "placeholderName": "jss-footer",
+              "dataSource": {
+                "name": "home-jss-footer-Footer-1",
+                "displayName": "Footer-1",
+                "template": "Footer",
+                "fields": [
+                  {
+                    "name": "heading",
+                    "value": "Footer Content (Default route)"
+                  },
+                  {
+                    "name": "footerBanner",
+                    "value": {
+                      "src": "/data/media/img/footer.png",
+                      "alt": "footerLogo"
+                    }
+                  }
+                ]
+              },
+              "renderingParams": [],
+              "uid": "{541311F6-470C-5230-8425-3252C09B07BC}"
+            }
+          ],
+          "placeholders": [
+            "jss-header",
+            "jss-main",
+            "jss-footer"
+          ]
+        },
+        "fields": [
+          {
+            "name": "pageTitle",
+            "value": "Welcome to Sitecore JSS"
+          }
+        ],
+        "children": [
+          {
+            "id": "enquiry-page",
+            "name": "enquiry",
+            "layout": {
+              "renderings": [
+                {
+                  "renderingName": "Dashboard",
+                  "placeholderKey": "/jss-main",
+                  "placeholderName": "jss-main",
+                  "dataSource": {
+                    "name": "enquiry-jss-main-Dashboard-1",
+                    "displayName": "Dashboard-1",
+                    "template": "Dashboard",
+                    "fields": [
+                      {
+                        "name": "heading",
+                        "value": "Hello, world!"
+                      },
+                      {
+                        "name": "customName",
+                        "value": "Hey this is enquiry"
+                      },
+                      {
+                        "name": "content",
+                        "value": "<div> <h3>Hi there</h3> <hr /> click <a href='http://www.google.com'>here</a> to open google </div>"
+                      }
+                    ]
+                  },
+                  "renderingParams": [],
+                  "uid": "{14636AC9-AA56-5D6E-9EC6-0DF4EF9C6769}"
+                }
+              ],
+              "placeholders": [
+                "jss-main"
+              ]
+            },
+            "fields": [
+              {
+                "name": "pageTitle",
+                "value": "Enquiry page"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "nonRoutes": []
+  },
+  "dictionary": []
+}
